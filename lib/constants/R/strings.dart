@@ -5,4 +5,5 @@ class Strings {
       "Selamat Datang di Aplikasi Widya Edu Aplikasi Latihan dan Konsultasi Soal";
   String loginwithGoogle = "Masuk dengan Google";
   String loginwithApple = "Masuk dengan Apple ID";
+  String register = "Yuk isi data diri!";
 }

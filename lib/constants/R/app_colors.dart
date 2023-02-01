@@ -7,4 +7,6 @@ class AppColors {
   Color greySubtitle = Color(0xff6A7483);
   Color blacklogin = Color(0xff1A1F26);
   Color whitelogin = Color(0xffFFFFFF);
+  Color greyborder = Color(0xffd6d6d6);
+  Color greyhinttext = Color(0xffaaaaaa);
 }
