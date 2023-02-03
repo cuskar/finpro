@@ -1,4 +1,5 @@
 import 'package:final_project/view/main/latihan_soal/home_page.dart';
+import 'package:final_project/view/paket_soal_page.dart';
 import 'package:flutter/material.dart';
 
 class MapelPage extends StatelessWidget {
@@ -18,7 +19,11 @@ class MapelPage extends StatelessWidget {
         ),
         child: ListView.builder(
           itemBuilder: ((context, index) {
-            return GestureDetector(onTap: (() {}), child: MapelWidget());
+            return GestureDetector(
+                onTap: (() {
+                  Navigator.of(context).pushNamed(PaketSoalPage.route);
+                }),
+                child: MapelWidget());
           }),
         ),
       ),

@@ -5,7 +5,7 @@ import 'package:final_project/view/main/profile/profile_screen.dart';
 import "package:flutter/material.dart";
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  const MainPage({Key? key}) : super(key: key);
   static String route = "main_page";
   @override
   State<MainPage> createState() => _MainPageState();
