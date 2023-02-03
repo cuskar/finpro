@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(R.assets.icGoogle),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   Text(
                     R.strings.loginwithGoogle,
                     style: TextStyle(
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(R.assets.icApple),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   Text(
                     R.strings.loginwithApple,
                     style: TextStyle(

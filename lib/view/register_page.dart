@@ -20,9 +20,9 @@ class _RegisterPageState extends State<RegisterPage> {
   final emailController = TextEditingController();
   onTapGender(Gender genderInput) {
     if (gender == Gender.lakiLaki) {
-      this.gender = "Laki-laki";
+      gender = "Laki-laki";
     } else {
-      this.gender = "Perempuan";
+      gender = "Perempuan";
     }
     setState(() {});
   }
@@ -48,7 +48,8 @@ class _RegisterPageState extends State<RegisterPage> {
           padding: const EdgeInsets.only(bottom: 20.0),
           child: ButtonLogin(
             onTap: () {
-              Navigator.of(context).pushNamed(MainPage.route);
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil(MainPage.route, (context) => false);
             },
             backgroundColor: R.colors.primary,
             borderColor: R.colors.primary,
@@ -79,12 +80,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 hinttext: 'Email',
                 title: 'Email',
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               RegisterTextField(
                 hinttext: 'Nama Lengkap Anda',
                 title: 'Nama Lengkap',
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 "Jenis Kelamin",
                 style: TextStyle(
@@ -92,7 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: [
                   Expanded(
@@ -121,7 +122,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             fontSize: 14,
                             color: gender == "Laki-laki"
                                 ? R.colors.whitelogin
-                                : Color(0xff282828),
+                                : const Color(0xff282828),
                           ),
                         ),
                       ),
@@ -152,7 +153,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             fontSize: 14,
                             color: gender == "Perempuan"
                                 ? R.colors.whitelogin
-                                : Color(0xff282828),
+                                : const Color(0xff282828),
                           ),
                         ),
                       ),
@@ -160,18 +161,18 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 "Kelas",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 14),
+                padding: const EdgeInsets.symmetric(horizontal: 14),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.white,
@@ -194,7 +195,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       }),
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               RegisterTextField(
                 hinttext: 'Nama Sekolah',
                 title: 'Nama Sekolah',
