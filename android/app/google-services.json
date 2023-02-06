@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "776376692409",
+    "project_id": "elearning-timmy",
+    "storage_bucket": "elearning-timmy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776376692409:android:ed39ebdedec92908d6f568",
+        "android_client_info": {
+          "package_name": "com.example.final_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776376692409-hpdrc34l2ssm72ofll7e2110017123ss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8NYI5v9NhVdCKuA5n7pdcnMUM3h3jtdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776376692409-hpdrc34l2ssm72ofll7e2110017123ss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
