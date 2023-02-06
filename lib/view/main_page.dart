@@ -1,7 +1,7 @@
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/main/discussion/chat_screen.dart';
 import 'package:final_project/view/main/latihan_soal/home_page.dart';
-import 'package:final_project/view/main/profile/profile_screen.dart';
+import 'package:final_project/view/main/profile/profile_page.dart';
 import "package:flutter/material.dart";
 
 class MainPage extends StatefulWidget {

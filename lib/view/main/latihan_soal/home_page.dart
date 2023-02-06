@@ -1,5 +1,6 @@
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/main/latihan_soal/mapel_page.dart';
+import 'package:final_project/view/main/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
