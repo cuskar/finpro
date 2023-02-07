@@ -65,31 +65,34 @@ class _HomePageState extends State<HomePage> {
   Container _buildHomeListMapel() {
     return Container(
       color: Colors.white,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+      margin: EdgeInsets.symmetric(horizontal: 25, vertical: 22),
       child: Column(
         children: [
-          Row(
-            children: [
-              Text(
-                "Pilih Pelajaran",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Text(
+                  "Pilih Pelajaran",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Spacer(),
-              TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed(MapelPage.route);
-                  },
-                  child: Text(
-                    "Lihat Semua",
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: R.colors.primary),
-                  ))
-            ],
+                Spacer(),
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(MapelPage.route);
+                    },
+                    child: Text(
+                      "Lihat Semua",
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: R.colors.primary),
+                    ))
+              ],
+            ),
           ),
           MapelWidget(),
           MapelWidget(),
