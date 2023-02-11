@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/register_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';

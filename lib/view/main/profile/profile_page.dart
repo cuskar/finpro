@@ -137,18 +137,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           GestureDetector(
             onTap: () async {
-              if (kIsWeb) {
-                await GoogleSignIn(
-                  clientId:
-                      "776376692409-31n3hfk156fkhkuucqijle4gdc10cq74.apps.googleusercontent.com",
-                  scopes: <String>[
-                    'email',
-                    'https://www.googleapis.com/auth/contacts.readonly',
-                  ],
-                ).signOut();
-              } else {
-                await GoogleSignIn().signOut();
-              }
+              await GoogleSignIn().signOut();
               await FirebaseAuth.instance.signOut();
               Navigator.of(context)
                   .pushNamedAndRemoveUntil(LoginPage.route, (route) => false);
