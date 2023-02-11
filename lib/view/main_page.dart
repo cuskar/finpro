@@ -24,15 +24,15 @@ class _MainPageState extends State<MainPage> {
           ),
           onPressed: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => ChatPage()),
+              MaterialPageRoute(builder: (context) => const ChatPage()),
             );
           }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: _buildBottomNavigation(),
       body: PageView(
         controller: _pc,
-        physics: NeverScrollableScrollPhysics(),
-        children: [
+        physics: const NeverScrollableScrollPhysics(),
+        children: const [
           HomePage(),
           // ChatPage(),
           ProfilePage(),
@@ -63,7 +63,7 @@ class _MainPageState extends State<MainPage> {
                       onTap: () {
                         index = 0;
                         _pc.animateToPage(index,
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             curve: Curves.bounceIn);
                       },
                       child: Column(
@@ -109,13 +109,13 @@ class _MainPageState extends State<MainPage> {
                         index = 1;
                         _pc.animateToPage(
                           index,
-                          duration: Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 500),
                           curve: Curves.easeInOut,
                         );
                         setState(() {});
                       },
                       child: Column(
-                        children: [
+                        children: const [
                           Icon(Icons.person),
                           Text("Profile"),
                         ],

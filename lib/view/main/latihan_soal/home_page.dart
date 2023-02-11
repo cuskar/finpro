@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, sized_box_for_whitespace
+
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/main/latihan_soal/mapel_page.dart';
 import 'package:final_project/view/main/profile/profile_page.dart';
@@ -26,8 +28,8 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
                       "Terbaru",
                       style: TextStyle(
@@ -36,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Container(
                     height: 150,
                     child: ListView.builder(
@@ -52,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                       }),
                     ),
                   ),
-                  SizedBox(height: 35),
+                  const SizedBox(height: 35),
                 ],
               ),
             )
@@ -65,21 +67,21 @@ class _HomePageState extends State<HomePage> {
   Container _buildHomeListMapel() {
     return Container(
       color: Colors.white,
-      margin: EdgeInsets.symmetric(horizontal: 25, vertical: 22),
+      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 22),
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
             child: Row(
               children: [
-                Text(
+                const Text(
                   "Pilih Pelajaran",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).pushNamed(MapelPage.route);
@@ -94,9 +96,9 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          MapelWidget(),
-          MapelWidget(),
-          MapelWidget(),
+          const MapelWidget(),
+          const MapelWidget(),
+          const MapelWidget(),
         ],
       ),
     );
@@ -120,7 +122,7 @@ class _HomePageState extends State<HomePage> {
               horizontal: 20.0,
               vertical: 15,
             ),
-            child: Text(
+            child: const Text(
               "Mau kerjain latihan soal apa hari ini?",
               style: TextStyle(
                   fontSize: 19,
@@ -191,26 +193,26 @@ class MapelWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
-      margin: EdgeInsets.only(bottom: 10),
-      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 21.93),
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 21.93),
       child: Row(
         children: [
           Container(
             height: 53,
             width: 53,
-            padding: EdgeInsets.all(13),
+            padding: const EdgeInsets.all(13),
             decoration: BoxDecoration(
                 color: R.colors.grey, borderRadius: BorderRadius.circular(10)),
             child: Image.asset(R.assets.icAtom),
           ),
-          SizedBox(
+          const SizedBox(
             width: 6,
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Matematika",
                   style: TextStyle(
                     fontSize: 12,
@@ -225,7 +227,7 @@ class MapelWidget extends StatelessWidget {
                     color: R.colors.greySubtitleHome,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Stack(

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:final_project/constants/r.dart';
 import 'package:flutter/material.dart';
 
@@ -14,14 +16,14 @@ class _PaketSoalPageState extends State<PaketSoalPage> {
     return Scaffold(
       backgroundColor: R.colors.grey,
       appBar: AppBar(
-        title: Text("Paket Soal"),
+        title: const Text("Paket Soal"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Pilih Paket Soal",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -35,10 +37,10 @@ class _PaketSoalPageState extends State<PaketSoalPage> {
                 crossAxisCount: 2,
                 childAspectRatio: 4 / 3,
                 children: [
-                  PaketSoalWidget(),
-                  PaketSoalWidget(),
-                  PaketSoalWidget(),
-                  PaketSoalWidget(),
+                  const PaketSoalWidget(),
+                  const PaketSoalWidget(),
+                  const PaketSoalWidget(),
+                  const PaketSoalWidget(),
                 ],
               ),
             ),
@@ -77,8 +79,8 @@ class PaketSoalWidget extends StatelessWidget {
               width: 14,
             ),
           ),
-          SizedBox(height: 4),
-          Text(
+          const SizedBox(height: 4),
+          const Text(
             "Aljabar",
             style: TextStyle(
               fontWeight: FontWeight.bold,

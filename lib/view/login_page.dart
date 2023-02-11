@@ -1,9 +1,10 @@
+// ignore_for_file: use_build_context_synchronously, duplicate_ignore
+
 import 'dart:async';
 
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/register_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -18,32 +19,32 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   Future<UserCredential> signInWithGoogle() async {
-    if (kIsWeb) {
-      GoogleAuthProvider googleProvider = GoogleAuthProvider();
+    // if (kIsWeb) {
+    //   GoogleAuthProvider googleProvider = GoogleAuthProvider();
 
-      googleProvider
-          .addScope('https://www.googleapis.com/auth/contacts.readonly');
-      googleProvider.setCustomParameters({'login_hint': 'user@example.com'});
+    //   googleProvider
+    //       .addScope('https://www.googleapis.com/auth/contacts.readonly');
+    //   googleProvider.setCustomParameters({'login_hint': 'user@example.com'});
 
-      // Once signed in, return the UserCredential
-      return await FirebaseAuth.instance.signInWithPopup(googleProvider);
-    } else {
-      // Trigger the authentication flow
-      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    //   // Once signed in, return the UserCredential
+    //   return await FirebaseAuth.instance.signInWithPopup(googleProvider);
+    // } else {
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
-      // Obtain the auth details from the request
-      final GoogleSignInAuthentication? googleAuth =
-          await googleUser?.authentication;
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
 
-      // Create a new credential
-      final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth?.accessToken,
-        idToken: googleAuth?.idToken,
-      );
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
 
-      // Once signed in, return the UserCredential
-      return await FirebaseAuth.instance.signInWithCredential(credential);
-    }
+    // Once signed in, return the UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
+    // }
   }
 
   @override
@@ -90,9 +91,10 @@ class _LoginPageState extends State<LoginPage> {
 
                 final user = FirebaseAuth.instance.currentUser;
                 if (user != null) {
+                  // ignore: use_build_context_synchronously
                   Navigator.of(context).pushNamed(RegisterPage.route);
                 } else {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                     content: Text("Gagal Masuk"),
                     duration: Duration(seconds: 2),
                   ));

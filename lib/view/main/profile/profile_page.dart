@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -17,12 +19,12 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Akun Saya"),
+        title: const Text("Akun Saya"),
         centerTitle: true,
         actions: [
           TextButton(
             onPressed: (() {}),
-            child: Text(
+            child: const Text(
               "Edit",
               style: TextStyle(
                 color: Colors.white,
@@ -34,7 +36,7 @@ class _ProfilePageState extends State<ProfilePage> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 20,
               bottom: 60,
               right: 15,
@@ -42,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             decoration: BoxDecoration(
                 color: R.colors.primary,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(9),
                     bottomRight: Radius.circular(9))),
             child: Row(
@@ -50,7 +52,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Nama User",
                         style: TextStyle(
@@ -85,13 +87,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 BoxShadow(blurRadius: 7, color: Colors.black.withOpacity(0.2))
               ],
             ),
-            margin: EdgeInsets.symmetric(vertical: 18, horizontal: 13),
-            padding: EdgeInsets.symmetric(vertical: 18, horizontal: 13),
+            margin: const EdgeInsets.symmetric(vertical: 18, horizontal: 13),
+            padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 13),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Identitas Diri"),
-                SizedBox(
+                const Text("Identitas Diri"),
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
@@ -152,8 +154,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   .pushNamedAndRemoveUntil(LoginPage.route, (route) => false);
             },
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 13),
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              margin: const EdgeInsets.symmetric(horizontal: 13),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -162,7 +164,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ],
               ),
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     Icons.exit_to_app,
                     color: Colors.red,

@@ -1,3 +1,5 @@
+// ignore_for_file: unrelated_type_equality_checks, sort_child_properties_last
+
 import 'package:final_project/constants/r.dart';
 import 'package:final_project/view/login_page.dart';
 import 'package:final_project/view/main_page.dart';
@@ -30,11 +32,11 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff0f3f5),
+      backgroundColor: const Color(0xfff0f3f5),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight + 20),
+        preferredSize: const Size.fromHeight(kToolbarHeight + 20),
         child: AppBar(
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(25.0),
             bottomRight: Radius.circular(25.0),
@@ -90,12 +92,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: 'Email',
               ),
               const SizedBox(height: 5),
-              RegisterTextField(
+              const RegisterTextField(
                 hinttext: 'Nama Lengkap Anda',
                 title: 'Nama Lengkap',
               ),
               const SizedBox(height: 5),
-              Text(
+              const Text(
                 "Jenis Kelamin",
                 style: TextStyle(
                   fontSize: 16,
@@ -171,9 +173,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 ],
               ),
               const SizedBox(height: 5),
-              Text(
+              const Text(
                 "Kelas",
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
@@ -205,7 +207,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               const SizedBox(height: 5),
-              RegisterTextField(
+              const RegisterTextField(
                 hinttext: 'Nama Sekolah',
                 title: 'Nama Sekolah',
               ),

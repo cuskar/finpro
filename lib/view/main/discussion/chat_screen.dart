@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers, duplicate_ignore
+
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
@@ -12,27 +14,28 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Diskusi Soal"),
+        title: const Text("Diskusi Soal"),
       ),
       body: Column(
         children: [
           Expanded(
             child: ListView.builder(
                 itemBuilder: (BuildContext context, int index) {
+              // ignore: avoid_unnecessary_containers
               return Container(
                 child: Column(children: [
-                  Text("Nama User"),
+                  const Text("Nama User"),
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(10),
                           bottomRight: Radius.circular(10),
                           topRight: Radius.circular(10),
                         )),
-                    child: Text("Pesan"),
+                    child: const Text("Pesan"),
                   ),
-                  Text("Waktu Kirim"),
+                  const Text("Waktu Kirim"),
                 ]),
               );
             }),
@@ -42,22 +45,22 @@ class _ChatPageState extends State<ChatPage> {
               child: Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.add),
+                    icon: const Icon(Icons.add),
                     onPressed: (() {}),
                   ),
                   Container(
                     child: Row(
                       children: [
-                        Expanded(child: TextField()),
+                        const Expanded(child: TextField()),
                         IconButton(
-                          icon: Icon(Icons.add),
+                          icon: const Icon(Icons.add),
                           onPressed: (() {}),
                         )
                       ],
                     ),
                   ),
                   IconButton(
-                    icon: Icon(Icons.add),
+                    icon: const Icon(Icons.add),
                     onPressed: (() {}),
                   )
                 ],
